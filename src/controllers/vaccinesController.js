@@ -45,9 +45,21 @@ const getOneVaccine = async (req,res) => {
         res.status(500).send({message: error.message}) 
     }
 }
+const setVaccinated = async (req,res) => {
+    const id = req.params.id
+    try{
+        const vaccine = await Vaccines.update({vaccinated: true}, {where: {id}})
+
+        vaccine && vaccine[0] > 0 ? res.status(200).send({message: "Vacina marcada como aplicada!"}) : res.status(404).send({message:`Vacina com ID ${id} não encontrada para alterar status`})
+        
+    }catch(error){
+        res.status(500).send({message: 'Error'}) 
+    }
+}
 
 module.exports = {
     createVaccine,
     getAllVaccines,
-    getOneVaccine
+    getOneVaccine,
+    setVaccinated
 }
