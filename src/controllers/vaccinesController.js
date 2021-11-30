@@ -19,6 +19,25 @@ const createVaccine = async (req,res)=>{
     }
 };
 
+const getAllVaccines = async (req, res) =>{
+    try{
+        const vaccines = await Vaccines.findAll()
+        
+        if (vaccines && vaccines.length > 0){
+            res.status(200).send(vaccines)
+        }else{
+            res.status(204).send()
+        }
+
+    }catch(error){
+        console.log(error)
+        res.status(500).send({
+            message: error.message
+        })
+    }
+};
+
 module.exports = {
     createVaccine,
+    getAllVaccines
 }
