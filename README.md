@@ -9,4 +9,4 @@
 | GET          | `/vaccines`                | Return all the vaccines resgistered    |
 | GET          | `/vaccines/:id`            | Return only one especific vaccine      |
 | POST         | `/vaccines`                | Register a new vaccine                 |
-| PATCH        | `/vaccines/:id/vaccinated` | mark as "taken" one vaccine            |
+| PATCH        | `/vaccines/:id/vaccinated` | Mark as "taken" one vaccine            |
