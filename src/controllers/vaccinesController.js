@@ -1,4 +1,3 @@
-const { sync } = require("../models/vaccine");
 const Vaccines = require("../models/vaccine");
 
 const createVaccine = async (req,res)=>{
@@ -12,7 +11,7 @@ const createVaccine = async (req,res)=>{
         });
 
         res.status(201).send(vaccine);
-        console.log(`vacina contra ${name} criada!`);
+        console.log(`vacina contra ${name} cadastrada!`);
     }catch(error){
         res.status(500).send({
             message: error.message
