@@ -6,7 +6,7 @@
 
 | Verbo        | Recurso                    | Descrição                              |
 | ------------ | -------------------------- | -------------------------------------- |
-| GET          | `/vaccines`                 | Retornar todas as vacinas cadastradas  |
-| GET          | `/vaccines/:id`             | Retornar apenas uma vacina específica  |
-| POST         | `/vaccines`                | Cadastrar uma nova vacina              |
-| PATCH        | `/vaccines/:id/vaccinated`  | Marcar se tomou a vacina               |
+| GET          | `/vaccines`                | Return all the vaccines resgistered    |
+| GET          | `/vaccines/:id`            | Return only one especific vaccine      |
+| POST         | `/vaccines`                | Register a new vaccine                 |
+| PATCH        | `/vaccines/:id/vaccinated` | mark as "taken" one vaccine            |
