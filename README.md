@@ -4,7 +4,7 @@
 
 ### Routes
 
-| Verbo        | Recurso                    | Descrição                              |
+| Method       | Route                      | Descrição                              |
 | ------------ | -------------------------- | -------------------------------------- |
 | GET          | `/vaccines`                | Return all the vaccines resgistered    |
 | GET          | `/vaccines/:id`            | Return only one especific vaccine      |
