@@ -6,5 +6,6 @@ router.get("/", controller.getAllVaccines)
 router.get("/:id", controller.getOneVaccine)
 router.patch("/:id/vaccinated", controller.setVaccinated)
 router.delete("/", controller.deleteAll)
+router.delete("/:id", controller.deleteOne)
 
 module.exports = router

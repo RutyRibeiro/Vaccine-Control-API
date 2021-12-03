@@ -60,6 +60,21 @@ const deleteAll = async (req,res) => {
     }
 
 }
+
+const deleteOne = async (req,res) => {
+    const id = req.params.id
+    try{
+        deletedRows = await Vaccines.destroy({where:{id}})
+        console.log(deletedRows)
+        deletedRows && deletedRows > 0 ? 
+        res.status(200).send({message:`${deletedRows} vacina deletada`}) 
+        : res.status(404).send({message:`A vacina de id ${id} não foi encontrada deletar `})
+        
+    }catch(error){
+        res.status(500).send({message: error.message}) 
+    }
+
+}
 const setVaccinated = async (req,res) => {
     const id = req.params.id
     try{
@@ -77,5 +92,6 @@ module.exports = {
     getAllVaccines,
     getOneVaccine,
     setVaccinated,
-    deleteAll
+    deleteAll,
+    deleteOne
 }
