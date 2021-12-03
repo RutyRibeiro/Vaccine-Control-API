@@ -2,6 +2,7 @@ const Vaccines = require("../models/vaccine");
 
 const createVaccine = async (req,res)=>{
     const { name, expected_date, vaccinated } = req.body
+    console.log(expected_date)
 
     try{
         const vaccine = await Vaccines.create({
@@ -44,6 +45,21 @@ const getOneVaccine = async (req,res) => {
         res.status(500).send({message: error.message}) 
     }
 }
+
+const deleteAll = async (req,res) => {
+    // const id = req.params.id
+    try{
+        deletedRows = await Vaccines.destroy({where:{}, truncate: false})
+        console.log(deletedRows)
+        deletedRows && deletedRows > 0 ? 
+        res.status(200).send({message:`${deletedRows} vacinas deletadas`}) 
+        : res.status(404).send({message:`Não foram encontradas vacinas para deletar `})
+        
+    }catch(error){
+        res.status(500).send({message: error.message}) 
+    }
+
+}
 const setVaccinated = async (req,res) => {
     const id = req.params.id
     try{
@@ -60,5 +76,6 @@ module.exports = {
     createVaccine,
     getAllVaccines,
     getOneVaccine,
-    setVaccinated
+    setVaccinated,
+    deleteAll
 }
