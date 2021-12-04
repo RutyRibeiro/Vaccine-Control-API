@@ -9,4 +9,11 @@
 | GET          | `/vaccines`                | Return all the vaccines resgistered    |
 | GET          | `/vaccines/:id`            | Return only one especific vaccine      |
 | POST         | `/vaccines`                | Register a new vaccine                 |
-| PATCH        | `/vaccines/:id/vaccinated` | Mark as "vaccinated" one vaccine            |
+| PATCH        | `/vaccines/:id/vaccinated` | Mark as "vaccinated" one vaccine       |
+| DELETE       | `/vaccines/`               | Delete al vaccines registered          |
+| DELETE       | `/vaccines/:id/`           | Delete one vaccine                     |
+
+### Documentation
+
+For read the documentation of this project acess https://vaccine-control.herokuapp.com 
+
