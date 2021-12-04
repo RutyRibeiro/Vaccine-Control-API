@@ -1,11 +1,7 @@
+const path = require("path")
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req,res) => {
-    res.status(200).send({
-        title:"Server working",
-        version:"1.0.0"
-    });
-});
+router.use("/", express.static(path.join(__dirname, "../../documentation")))
 
 module.exports = router
