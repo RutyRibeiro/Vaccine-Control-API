@@ -15,5 +15,5 @@
 
 ### Documentation
 
-For read this project documentation acess https://vaccine-control.herokuapp.com 
+For read this project documentation access https://vaccine-control.herokuapp.com 
 
