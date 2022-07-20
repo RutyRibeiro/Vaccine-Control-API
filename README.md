@@ -10,7 +10,6 @@
 | GET          | `/vaccines/:id`            | Return only one especific vaccine      |
 | POST         | `/vaccines`                | Register a new vaccine                 |
 | PATCH        | `/vaccines/:id/vaccinated` | Mark as "vaccinated" one vaccine       |
-| DELETE       | `/vaccines/:id/`           | Delete one vaccine                     |
 
 ### Documentation
 
